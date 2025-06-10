@@ -1,6 +1,6 @@
 # Lyra's Image Alchemist
 
-A modern, beautiful AI-powered image generation application built with React, TypeScript, and Tailwind CSS. Transform your creative visions into stunning artwork using OpenRouter's AI models and Google's Imagen API.
+A modern, beautiful AI-powered image generation application built with React, TypeScript, and Tailwind CSS. Transform your creative visions into stunning artwork using OpenAI's DALL-E 3 and OpenRouter's AI models.
 
 ## Features
 
@@ -11,8 +11,8 @@ A modern, beautiful AI-powered image generation application built with React, Ty
 
 ### 🖼️ AI Art Studio
 - **Multiple Aspect Ratios**: Square, landscape, portrait, widescreen, and tall portrait
-- **Batch Generation**: Create 8 variations simultaneously
-- **High-Quality Output**: Up to 1024px resolution images
+- **Batch Generation**: Create 4 variations simultaneously
+- **High-Quality Output**: Up to 1792x1024 resolution images with DALL-E 3
 - **One-Click Download**: Save your favorite creations instantly
 
 ### 🎯 Modern Design
@@ -31,7 +31,7 @@ A modern, beautiful AI-powered image generation application built with React, Ty
 2. **Set up API Keys**
    ```bash
    cp .env.example .env
-   # Add your OpenRouter and Gemini API keys to .env
+   # Add your OpenRouter and OpenAI API keys to .env
    ```
 
 3. **Start Development**
@@ -48,14 +48,15 @@ This application requires two API keys:
 - Get your API key from the dashboard
 - Uses Claude 3.5 Sonnet for prompt enhancement and refinement
 
-### Google Gemini API (for image generation)
-- Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-- Requires access to `imagen-3.0-generate-002` model
+### OpenAI API (for image generation)
+- Sign up at [OpenAI](https://platform.openai.com/)
+- Get your API key from the API keys section
+- Uses DALL-E 3 for high-quality image generation
 
 Add both keys to your `.env` file:
 ```
 VITE_OPENROUTER_API_KEY=your_openrouter_api_key_here
-VITE_GEMINI_API_KEY=your_gemini_api_key_here
+VITE_OPENAI_API_KEY=your_openai_api_key_here
 ```
 
 ## Architecture
@@ -76,7 +77,7 @@ src/
 - **Vite** for fast development
 - **Lucide React** for icons
 - **OpenRouter API** with Claude 3.5 Sonnet for text generation
-- **Google Imagen** for image generation
+- **OpenAI DALL-E 3** for image generation
 
 ## Production Ready
 
